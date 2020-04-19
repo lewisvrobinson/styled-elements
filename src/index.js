@@ -26,7 +26,7 @@ export function applyStyle(element, styles) {
   const id = generateUID();
   const className = `SE${id}`;
   const styleElement = document.createElement('style');
-  styleElement.setAttribute('styled-element', id);
+  styleElement.setAttribute('data-styled-element', id);
   styleElement.innerHTML = `.${className} {
     ${styles}
   }`;
