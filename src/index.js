@@ -1,11 +1,11 @@
-export function styled(tagName = requiredArg('tagName')) {
+export default function styled(tagName = requiredArg('tagName')) {
   return (...args) => {
     const styleString = computeString(args);
 
     if (isDOMElement(tagName)) {
       return applyStyle(tagName, styleString);
     }
-    return createElement(tagName, styleString);
+    return createStyledElement(tagName, styleString);
   };
 }
 
@@ -16,7 +16,7 @@ export const setTheme = (styled.setTheme = (theme = {}) => {
   styled.theme = { ...styled.theme, ...theme };
 });
 
-export function createElement(tag, styles) {
+export function createStyledElement(tag, styles) {
   const element = document.createElement(tag);
 
   return applyStyle(element, styles);
@@ -103,5 +103,3 @@ styled.tags.forEach((tag) => (styled[tag] = styled(tag)));
 function requiredArg(arg) {
   throw new Error(`${arg} is required`);
 }
-
-window.styled = styled;
