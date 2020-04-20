@@ -1,6 +1,6 @@
 {
   "name": "@lewisvrobinson/styled-elements",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "files": [
     "/lib"
@@ -9,6 +9,13 @@
     "build": "babel src/index.js -o lib/index.js",
     "test": "jest",
     "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewisvrobinson/styled-elements.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "Lewis Robinson",
