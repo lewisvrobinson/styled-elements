@@ -1,5 +1,7 @@
 # Styled Elements
 
+![Specs](https://github.com/lewisvrobinson/styled-elements/workflows/Specs/badge.svg)
+
 🚨 An **experiment** to recreate the [styled-components](https://github.com/styled-components) API (kinda).
 
 Element styles are appended to a `<style>` element. Each styled element is assigned a unique ID to scope the styles. This ID is appended to the elements `classList`.
